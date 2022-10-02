@@ -7,7 +7,7 @@ inquirer
     //Github UserName
     {
       type: "input",
-      name: "gitHub ",
+      name: "github ",
       message: "Please enter your GitHub username",
       //validates if the input is provided and acceptable
       validate: (value) => {
@@ -119,8 +119,23 @@ inquirer
     //contributing
     {
       type: "input",
-      name: "contributing",
+      name: "contribution",
       message: "How can users contribute to your project",
+      //validates if the input is provided and acceptable
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          console.log("Please enter a short description");
+          return false;
+        }
+      },
+    },
+    //test
+    {
+      type: "input",
+      name: "test",
+      message: "Please enter a short descripton on how to use your project",
       //validates if the input is provided and acceptable
       validate: (value) => {
         if (value) {
@@ -140,12 +155,41 @@ inquirer
     license,
     installation,
     usage,
-    contribution
+    contribution,
+    test
   }) => {
 //Markdown Template
  const generateReadME = `# ${title}
+ ## ${license}
+## Table of Contents
  
- *
+ * [Description](#description)
+ * [Installation Guide](#installation)
+ * [Usage](#usage)
+ * [Test Instructions](#test)
+ * [Contributing](#contributing)
+ * [License](#license)
+ 
+# Description
+${description}
+
+## Installation
+${installation}
+
+## Test Instructions
+${test}
+
+## Usage
+${usage}
+
+## Contributing
+${contribution}
+
+
+
+## Questions
+ *[${github}]https://github.com/${github}
+ *${email}
  `
   }
   
