@@ -188,13 +188,21 @@ ${contribution}
 
 
 ## Questions
- *[${github}]https://github.com/${github}
+ *[${github}](#https://github.com/${github})
  *${email}
- `
+ `;
+ //function to create readme 
+ ;
+  }
+  );
+  
+    fs.writeFile('./readX.md', createNewfile(title,generateReadME)), err => {
+          if (err) throw new Error(err);
+    
   }
   
 
 
 
 
-  }
+  
