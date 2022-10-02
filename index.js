@@ -1,13 +1,13 @@
 //node modules
 const inquirer = require("inquirer");
-//const fs = require("fs");
+const fs = require("fs");
 
 inquirer
   .prompt([
     //Github UserName
     {
       type: "input",
-      name: "GitHub Name",
+      name: "gitHub ",
       message: "Please enter your GitHub username",
       //validates if the input is provided and acceptable
       validate: (value) => {
@@ -21,7 +21,7 @@ inquirer
     },
     {
       type: "input",
-      name: "Email",
+      name: "email",
       message: "Please enter your email address",
       //validates if the input is provided and acceptable
       validate: (value) => {
@@ -51,7 +51,7 @@ inquirer
     //descripton
     {
       type: "input",
-      name: "Description",
+      name: "description",
       message: "Describe your project",
       //validates if the input is provided and acceptable
       validate: (value) => {
@@ -66,7 +66,7 @@ inquirer
     //license
     {
       type: "checkbox",
-      name: "License",
+      name: "license",
       message: "What badges does your project have?",
       choices: [
         "Tori",
@@ -89,7 +89,7 @@ inquirer
     //installation
     {
       type: "input",
-      name: "Installation",
+      name: "installation",
       message: "What command should be ran to install dependencies?",
       //validates if the input is provided and acceptable
       validate: (value) => {
@@ -104,7 +104,7 @@ inquirer
     //usage
     {
       type: "input",
-      name: "Usage",
+      name: "usage",
       message: "Please explain how this project can be used.",
       //validates if the input is provided and acceptable
       validate: (value) => {
@@ -119,7 +119,7 @@ inquirer
     //contributing
     {
       type: "input",
-      name: "Contributing",
+      name: "contributing",
       message: "How can users contribute to your project",
       //validates if the input is provided and acceptable
       validate: (value) => {
@@ -132,4 +132,25 @@ inquirer
       },
     },
   ])
-  .then((answers) => console.log(answers));
+  .then(({
+    github,
+    email,
+    title,
+    description,
+    license,
+    installation,
+    usage,
+    contribution
+  }) => {
+//Markdown Template
+ const generateReadME = `# ${title}
+ 
+ *
+ `
+  }
+  
+
+
+
+
+  }
