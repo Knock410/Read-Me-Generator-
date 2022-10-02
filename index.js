@@ -8,11 +8,12 @@ inquirer
       type: "input",
       name: "title",
       message: "What's is the project title ?",
-      validate: (nameInput) => {
-        if (nameInput) {
+      //validates if the input is provided and acceptable 
+      validate: (titleInput) => {
+        if (titleInput) {
           return true;
         } else {
-          console.log("Please enter your name!");
+          console.log("Please enter project title");
           return false;
         }
       },
