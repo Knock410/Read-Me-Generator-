@@ -4,6 +4,7 @@ const inquirer = require("inquirer");
 
 inquirer
   .prompt([
+    //title
     {
       type: "input",
       name: "title",
@@ -14,6 +15,104 @@ inquirer
           return true;
         } else {
           console.log("Please enter project title");
+          return false;
+        }
+      },
+    },
+    //descripton 
+    {
+      type: "input",
+      name: "Description",
+      message: "Describe your project",
+      //validates if the input is provided and acceptable 
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          console.log("Please enter a short project description");
+          return false;
+        }
+      },
+    },
+    //license
+    {
+      type: "checkbox",
+      name: "License",
+      message: "What badges does your project have?",
+      choices:[ 
+        "Tori",
+        "AssetSonar",
+        "SofTrack",
+        "Zylo",
+        "Zentitle",
+        "Alloy Navigator"
+
+      ],
+      //validates if the input is provided and acceptable 
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          console.log("Please choose all licenses that apply");
+          return false;
+        }
+      },
+    },
+    //installation 
+    {
+      type: "input",
+      name: "Installation",
+      message: "What command should be ran to install dependencies?",
+      //validates if the input is provided and acceptable 
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          console.log("Please enter the command");
+          return false;
+        }
+      },
+    },
+    //usage
+    {
+      type: "input",
+      name: "Usage",
+      message: "Please explain how this project can be used.",
+      //validates if the input is provided and acceptable 
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          console.log("Please enter a short  description");
+          return false;
+        }
+      },
+    },
+    //contributing  
+    {
+      type: "input",
+      name: "Contributing",
+      message: "How can users contribute to your project",
+      //validates if the input is provided and acceptable 
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          console.log("Please enter a short description");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "Description",
+      message: "Describe your project",
+      //validates if the input is provided and acceptable 
+      validate: (value) => {
+        if (value) {
+          return true;
+        } else {
+          console.log("Please enter a short project description");
           return false;
         }
       },
