@@ -8,7 +8,7 @@ const questions = [
   //Github UserName
   {
     type: "input",
-    name: "github ",
+    name: "github",
     message: "Please enter your GitHub username",
     //validates if the input is provided and acceptable
     validate: (value) => {
