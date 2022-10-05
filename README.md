@@ -1,9 +1,9 @@
-# EZ Music 
-![License Badge](https://img.shields.io/badge/license-MIT-red)
+# ReadMe Generator
+
     
 # Description
 
-This project allows users to find the chords,tabs and notes to their favorite hits 
+Generate a professional readme.md file via answering the question prompts 
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ This project allows users to find the chords,tabs and notes to their favorite hi
 * [Usage](#usage)
 * [Test Instructions](#test)
 * [Contributing](#contributing)
-* [License](#license)
+
 
 ## Installation
 
@@ -20,19 +20,19 @@ npm install
 
 ## Test Instructions
 
-You enter the song you want the arragment for and the project will return the arrangement for it 
+Answer the questions via terminal 
 
 ## Usage
 
-This project can be used to educate and inspire artist to try new songs and songs they like 
+This project can be used to effieciently generate readme files 
 
 ## Contributing
 
-fxing typos, writing an in-depth tutorial and answering questions about the project via stack overflow
+Users can test the project and provide feedback 
 
 ## Questions
     
-If you have any questions about the project you can contact me directly via MasterMaestro@gmail.com. 
+If you have any questions about the project you can contact me directly via enoch10evelyn@gmail.com. 
 
-You can find more of my work at [Maestro410](#https://github.com/Maestro410)   
+You can find more of my work at [Knock410](#https://github.com/Knock410)   
     
